@@ -1,0 +1,7 @@
+{
+  "name": "testfp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
