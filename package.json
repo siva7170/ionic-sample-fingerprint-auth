@@ -1,5 +1,5 @@
 {
-  "name": "testfp",
+  "name": "ionic-sample-fingerprint-auth",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -24,8 +24,11 @@
     "@capacitor/haptics": "1.1.3",
     "@capacitor/keyboard": "1.1.3",
     "@capacitor/status-bar": "1.0.6",
+    "@ionic-native/android-fingerprint-auth": "^4.20.0",
     "@ionic/angular": "^5.5.2",
+    "@siva7170/inw-secure-random-generator": "^0.0.3",
     "rxjs": "~6.6.0",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
@@ -41,11 +44,20 @@
     "@angular/language-service": "~12.0.1",
     "@capacitor/cli": "3.3.2",
     "@ionic/angular-toolkit": "^4.0.0",
+    "@siva7170/icp-secure-random-generator": "^0.0.3",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
+    "cordova-android": "^9.1.0",
+    "cordova-plugin-android-fingerprint-auth": "^1.5.0",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.0.5",
+    "cordova-plugin-ionic-webview": "^4.0.0",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -62,5 +74,22 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.2.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-android-fingerprint-auth": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "icp-secure-random-generator": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }
